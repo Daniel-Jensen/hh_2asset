@@ -320,10 +320,10 @@ def taylor_rule_D(i_D, pi_D, Y_D, Y_ss_D, rho_i_D, phi_pi_D, phi_y_D, r_star_D, 
     return taylor_res_D
 
 @simple
-def pricing_D(mc_D, pi_D, kappa_p_D, mu_p_D, SDF_D):
+def pricing_D(mc_D, pi_D, kappa_p_D, mu_p_D, beta_D):
     # Rotemberg price NKPC: π_D = κ_p(mc_D - 1/μ_p) + β E[π_D(+1)].
     # mc_D = 1/μ_p in SS → residual = 0 at SS for any κ_p.
-    nkpc_p_res_D = pi_D - kappa_p_D * (mc_D - 1 / mu_p_D) - SDF_D * pi_D(+1)
+    nkpc_p_res_D = pi_D - kappa_p_D * (mc_D - 1 / mu_p_D) - beta_D * pi_D(+1)
     return nkpc_p_res_D
 
 @simple

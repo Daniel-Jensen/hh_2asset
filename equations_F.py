@@ -282,8 +282,8 @@ def taylor_rule_F(i_F, pi_F, Y_F, Y_ss_F, rho_i_F, phi_pi_F, phi_y_F, r_star_F, 
     return taylor_res_F
 
 @simple
-def pricing_F(mc_F, pi_F, kappa_p_F, mu_p_F, SDF_F):
-    nkpc_p_res_F = pi_F - kappa_p_F * (mc_F - 1 / mu_p_F) - SDF_F * pi_F(+1)
+def pricing_F(mc_F, pi_F, kappa_p_F, mu_p_F, beta_F):
+    nkpc_p_res_F = pi_F - kappa_p_F * (mc_F - 1 / mu_p_F) - beta_F * pi_F(+1)
     return nkpc_p_res_F
 
 @simple
