@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Local env / IDE
+.env
+.vscode/
+.idea/
+
+# NOTE: Discretisation/Outputs/ is *not* ignored — equations_D.py loads
+# Px_GMAR.txt and x_vec.txt from there.  If you regenerate large files
+# locally that you don't want in git, gitignore them individually.
